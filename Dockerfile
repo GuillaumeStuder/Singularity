@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y procps libssl-dev libcurl4-gnutls-dev c
     && R -e 'BiocManager::install("DESeq")' \
     && R -e 'install.packages("FactoMineR")' \
     && R -e 'install.packages("factoextra")' \
-    && R -e 'install.packages("EnhencedVolcano") \
-    && mkdir /pasteur
+    && R -e 'install.packages("EnhencedVolcano")
 
 ENTRYPOINT ["/usr/bin/R"]
