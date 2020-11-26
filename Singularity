@@ -1,18 +1,24 @@
-BootStrap: docker
-From: r-base:4.0.2
+BootStrap: debootstrap
+OSVersion: xenial
+MirrorURL: http://archive.ubuntu.com/ubuntu/
 
 %labels
-Maintainer Guillaume Studer
-base.image="r-base:4.0.2"
-version="1"
-software="EnhencedVolcano+DESeq2+FactoMineR+factoextra"
-%help
-Please faites que ca fonctionne
+  Maintainer Guillaume Studer
+  base.image="r-base:4.0.2"
+  version="1"
+  software="EnhencedVolcano+DESeq2+FactoMineR+factoextra"
+
 %post
-apt-get update
-apt-get install -y procps libssl-dev libcurl4-gnutls-dev curl git libopenmpi-dev openmpi-bin openmpi-doc libxml2-dev
-R -e 'if (!requireNamespace("BiocManager", quietly = TRUE)){install.packages("BiocManager")}'
-R -e 'BiocManager::install("DESeq2")'
-R -e 'install.packages("FactoMineR")'
-R -e 'install.packages("factoextra")'
-R -e 'install.packages("EnhencedVolcano")'
+
+  sed -i 's/main/main restricted universe/g' /etc/apt/sources.list
+  apt-get update
+  
+  apt-get install -y libopenblas-dev r-base-core libcurl4-openssl-dev libopenmpi-dev openmpi-bin openmpi-common openmpi-doc openssh-client openssh-server libssh-dev wget vim git nano git cmake  gfortran g++ curl wget python autoconf bzip2 libtool libtool-bin python-pip python-dev
+  apt-get clean
+  locale-gen en_US.UTF-8
+  
+  R --slave -e 'install.packages("BiocManager")'
+  R --slave -e 'BiocManager::install("DESeq2")'
+  R --slave -e 'install.packages("FactoMineR")'
+  R --slave -e 'install.packages("factoextra")'
+  R --slave -e 'BiocManager::install("EnhancedVolcano")'
