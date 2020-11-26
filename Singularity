@@ -17,7 +17,18 @@ From: r-base:4.0.2
   R --slave -e 'install.packages("FactoMineR")'
   R --slave -e 'install.packages("factoextra")'
   R --slave -e 'install.packages("matrixStats")'
+  R --slave -e 'install.packages("ggalt")'
+  R --slave -e 'install.packages("ggrastr")'
+  R --slave -e 'install.packages("knitr")'
+  R --slave -e 'install.packages("gridExtra")'
+  R --slave -e 'install.packages("RUnit")'
+  
+  
   R --slave -e 'install.packages("BiocManager")'
+  R --slave -e 'BiocManager::install("airway")'
+  R --slave -e 'BiocManager::install("org.Hs.eg.db")'
+  R --slave -e 'BiocManager::install("pasilla")'
+  R --slave -e 'BiocManager::install("magrittr")'
   R --slave -e 'BiocManager::install("BiocGenerics")'
   R --slave -e 'BiocManager::install("GenomeInfoDb")'
   R --slave -e 'BiocManager::install("MatrixGenerics")'
