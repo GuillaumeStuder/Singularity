@@ -1,6 +1,6 @@
 # R + DESeq + 
 # https://cran.r-project.org/
-# v4.0.2 / v1.39.0
+# v4.0.2 / v1.39.0 / nsp / nsp
 
 # base image: r-base:4.0.2
 FROM r-base:4.0.2
