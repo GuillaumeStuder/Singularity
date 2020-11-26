@@ -12,6 +12,7 @@ Please faites que ca fonctionne
 apt-get update
 apt-get install -y procps libssl-dev libcurl4-gnutls-dev curl git libopenmpi-dev openmpi-bin openmpi-doc libxml2-dev
 R -e 'if (!requireNamespace("BiocManager", quietly = TRUE)){install.packages("BiocManager")}'
-R -e 'BiocManager::install("DESeq")'
+R -e 'BiocManager::install("DESeq2")'
 R -e 'install.packages("FactoMineR")'
 R -e 'install.packages("factoextra")'
+R -e 'install.packages("EnhencedVolcano")'
