@@ -12,8 +12,19 @@ From: r-base:4.0.2
   apt-get update
   apt-get install -y procps libssl-dev libcurl4-gnutls-dev curl git libopenmpi-dev openmpi-bin openmpi-doc libxml2-dev
   
-  R --slave -e 'install.packages("BiocManager")'
-  R --slave -e 'BiocManager::install("DESeq2")'
+  R --slave -e 'install.packages("ggplot2")'
+  R --slave -e 'install.packages("ggrepel")'
   R --slave -e 'install.packages("FactoMineR")'
   R --slave -e 'install.packages("factoextra")'
+  R --slave -e 'install.packages("matrixStats")'
+  R --slave -e 'install.packages("BiocManager")'
+  R --slave -e 'BiocManager::install("BiocGenerics")'
+  R --slave -e 'BiocManager::install("GenomeInfoDb")'
+  R --slave -e 'BiocManager::install("MatrixGenerics")'
+  R --slave -e 'BiocManager::install("Biobase")'
+  R --slave -e 'BiocManager::install("IRanges")'
+  R --slave -e 'BiocManager::install("S4Vectors")'
+  R --slave -e 'BiocManager::install("GenomicRanges")'
+  R --slave -e 'BiocManager::install("SummarizedExperiment")'
+  R --slave -e 'BiocManager::install("DESeq2")'
   R --slave -e 'BiocManager::install("EnhancedVolcano")'
