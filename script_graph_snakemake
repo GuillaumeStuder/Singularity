@@ -1,14 +1,12 @@
 rule all:
 	input : 
-		"graph_individuals_pca.png",
-		"enhencedVolcano.png"
+		"graph_individuals_pca.png"
 
 rule utiliser_Rscript:
 	input:
 		"fichier.Rdata"
 	output:
-		"graph_individuals_pca.png",
-		"enhencedVolcano.png"
+		"graph_individuals_pca.png"
 	singularity:
 		"shub://GuillaumeStuder/essai_hackathon_container:latest"
 	script:
