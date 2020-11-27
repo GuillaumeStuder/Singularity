@@ -64,12 +64,12 @@ print("premiere_image_good")
 #keyvals <- ifelse(resultats$log2FoldChange < -10, 'petit',
 #                  ifelse(resultats$log2FoldChange > 10, 'grand','normal'))
 
-#png(filename = "enhencedVolcano.png")
+#png(filename = "enhancedVolcano.png")
 #EnhancedVolcano(resultats,
 #                lab = rownames(resultats),
 #                x = 'log2FoldChange', selectLab = rownames(resultats)[which(keyvals %in% c('petit', 'grand'))],
 #                y = 'padj', 
-#                title = 'WT VS mutÃ© avec p-value ajustÃ©e', xlim = c(-10,10), ylim = c(-1,20),
+#                title = 'WT VS muté avec p-value ajustée', xlim = c(-10,10), ylim = c(-1,20),
 #                pCutoff = 0.05,
 #                FCcutoff = 1,
 #                pointSize = 3.0, drawConnectors = TRUE,widthConnectors = 0.75,
