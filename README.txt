@@ -1,4 +1,8 @@
-Auteurs : Lucas Bernigaud Samatan, Charlotte Dubec, Guillaume Studer et Elodie Yan
+Auteurs :
+ Guillaume Studer <guillaume.studer@agroparistech.fr>
+ Lucas Bernigaud Samatan <lucas.bernigaudsamatan@agroparistech.fr>
+ Charlotte Dubec <charlotte.dubec@agroparistech.fr>
+ Elodie Yan <elodie.yan@agroapristech.fr>
 
 Decription :
 
